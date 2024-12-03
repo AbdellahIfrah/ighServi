@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - IGH Fontanería y Electricidad</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Personalización del estilo de la página de contacto */
+       .imagebg {
+           /* baground image with gradient */
+           background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url('img/empresa_fontaneria_electricistas.jpg');
+           background-size: cover;
+           background-repeat: no-repeat;
+           background-attachment: fixed;
+           color: #fff;           
+       }
+
+        .form-container {
+            background-color: #f8f9faaf;
+            border-radius: 8px;
+            padding: 30px;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4);
+        }
+    </style>
+</head>
+
+<body >
+    <!-- Barra de navegación -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="index.html">
+            <img src="img/incon.png" alt="Logo" width="60" height="50" class="d-inline-block align-top rounded">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">Sobre Nosotros</a></li>
+                <li class="nav-item"><a class="nav-link" href="services.html">Servicios</a></li>
+                <li class="nav-item"><a class="nav-link active" href="contact.html">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="imagebg">
+
+        <header class="p-2 text-center ">
+            <h1 class="display-4">Contacto</h1>
+            <p class="lead">¡Estamos aquí para ayudarte! Contáctanos para consultas o presupuestos.</p>
+        </header>
+    
+        <!-- Sección de Contacto -->
+        <section class="container  py-5 ">
+            <div class="row ">
+                <!-- Formulario de Contacto -->
+                <div class="col-md-6 mx-auto ">
+                    <div class="form-container text-dark">
+                        <h2 class="text-center mb-4">Envíanos un Mensaje</h2>
+                        <form class="contact-form ">
+                            <div class="form-group">
+                                <label for="name">Nombre</label>
+                                <input type="text" class="form-control" id="name" placeholder="Tu nombre">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Correo Electrónico</label>
+                                <input type="email" class="form-control" id="email" placeholder="Tu correo electrónico">
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Teléfono</label>
+                                <input type="text" class="form-control" id="phone" placeholder="Tu teléfono">
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Mensaje</label>
+                                <textarea class="form-control" id="message" rows="5"
+                                    placeholder="Escribe tu mensaje aquí"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block">Enviar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="d-flex justify-content-center align-items-center">
+            <section class="container p-5">
+                <div class="row align-items-center p-2">
+
+                    <div class="col text-center">
+                        <i class="fas fa-map-marker-alt fa-2x mb-2"></i>
+                        <h5>Dirección</h5>
+                        <p>Carrer Mallorca, s/n, 08214 Badia del Vallès, Barcelona</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <!-- Dirección -->
+                    <!-- Teléfono -->
+                    <div class="col-md-6 text-center">
+                        <i class="fas fa-phone fa-2x mb-2"></i>
+                        <h5>Teléfono</h5>
+                        <p>+34 123 456 789</p>
+                    </div>
+                    <!-- Correo Electrónico -->
+                    <div class="col-md-6 text-center">
+                        <i class="fas fa-envelope fa-2x mb-2"></i>
+                        <h5>Correo Electrónico</h5>
+                        <p>info@ighfontaneria.com</p>
+                    </div>
+                </div>
+            </section>
+            <section class="container pb-5">
+                <h2 class="text-center">Encuéntranos en el Mapa</h2>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="map-container"
+                            style="position: relative; height: 400px; width: 100%; border: 1px solid #ccc;">
+                            <!-- Mapa de Google con la ubicación de Institut de Badia del Vallès -->
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3032.4647677742755!2d2.1718469150174537!3d41.54554127926715!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4cc2c59d52a2f%3A0x15630009ed3dbad8!2sInstitut%20de%20Badia%20del%20Vall%C3%A8s!5e0!3m2!1ses!2ses!4v1615446768470!5m2!1ses!2ses"
+                                width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    
+    <!-- div for space -->
+    <div style="height: 60px;"></div>
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-4">
+        <p>&copy; 2023 IGH Fontanería y Electricidad - Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
