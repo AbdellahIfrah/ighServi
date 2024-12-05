@@ -1,43 +1,114 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Servicios - IGH Fontanería y Electricidad</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    
+    <link rel="icon" href="img/logo.png" type="image/x-icon">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <style>
-        /* Personalización de colores y estilo de servicios */
+        /* Targeta de servei */
         .service-card {
             background-color: #f8f9fa;
             border: 1px solid #dee2e6;
             border-radius: 10px;
             transition: transform 0.3s;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+            /* Mateixa alçada per a totes les targetes */
+            overflow: hidden;
+            /* Evita desbordaments visuals */
+            text-align: center;
+            /* Centrat del text */
         }
+
+        /* Efecte en hover */
         .service-card:hover {
             transform: scale(1.05);
         }
+
+        /* Imatge de servei */
         .service-img {
             border-top-left-radius: 5px;
             border-top-right-radius: 5px;
-            min-height: 250px;
+            height: 200px;
+            /* Mateixa alçada per a totes les imatges */
             object-fit: cover;
+            /* Manté la proporció sense deformar la imatge */
+            width: 100%;
+            /* Sempre ocupa tot l'amplada */
+        }
+
+        /* Títol de la targeta */
+        .card-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            color: #333;
         }
         .service-header {
             background-color: #007bff;
             color: white;
             padding: 1rem;
             text-align: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        /* Text del cos */
+        .card-text {
+            font-size: 1rem;
+            color: #555;
+            text-align: justify;
+            /* Text alineat justificat */
+            margin-bottom: 1rem;
+            line-height: 1.5;
+            /* Millora la llegibilitat */
+        }
+
+        /* Contenidor de la fila */
+        .row {
+            row-gap: 1.5rem;
+            /* Espai entre files */
+        }
+
+        /* Estil responsive */
+        @media (min-width: 768px) {
+            .col-md-4 {
+                display: flex;
+                align-items: stretch;
+                /* Assegura que les targetes s'estirin a l'alçada màxima */
+            }
+        }
+
+        /* Afegir un espai adequat per a cada targeta en dispositius petits */
+        @media (max-width: 767px) {
+            .service-card {
+                padding: 1rem;
+                /* Afegir espai al voltant del contingut en pantalles petites */
+            }
+
+            .card-title {
+                font-size: 1.1rem;
+            }
+
+            .card-text {
+                font-size: 0.95rem;
+            }
         }
     </style>
 </head>
+
 <body>
     <!-- Barra de navegación -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="index.html">
-            <img src="img/incon.png" alt="Logo" width="60" height="50" class="d-inline-block align-top rounded">
+            <img src="img/logo.png" alt="Logo" height="40" class="d-inline-block align-top rounded">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
             <span class="navbar-toggler-icon"></span>
@@ -55,61 +126,68 @@
     <!-- Encabezado de la Página -->
     <header class="jumbotron text-center text-white service-header">
         <h1 class="display-4">Nuestros Servicios</h1>
-        <p class="lead">Ofrecemos una amplia gama de servicios de fontanería y electricidad para cubrir todas tus necesidades.</p>
+        <p class="lead">Ofrecemos una amplia gama de servicios de fontanería y electricidad para cubrir todas tus
+            necesidades.</p>
     </header>
 
     <!-- Sección de Servicios -->
     <section class="container my-5">
         <div class="row">
             <!-- Servicio 1 -->
-            <div class="col-md-4 mb-4 ">
-                <div class="card service-card p-5">
-                    <img src="img/icon4.png.webp" class="card-img-top service-img p-2" alt="Servicio de Fontanería">
+            <div class="col-md-4 mb-4">
+                <div class="card service-card">
+                    <img src="img/icon4.png.webp" class="card-img-top service-img" alt="Servicio de Fontanería">
                     <div class="card-body">
-                        <h5 class="card-title text-left bold ">Fontanería</h5>
-                        <p class="card-text">Instalación y reparación de sistemas de agua potable y alcantarillado, así como mantenimiento de tuberías para garantizar un flujo de agua eficiente.</p>
+                        <h5 class="card-title">Fontanería</h5>
+                        <p class="card-text">Instalación y reparación de sistemas de agua potable y alcantarillado, así
+                            como mantenimiento de tuberías para garantizar un flujo de agua eficiente.</p>
                     </div>
                 </div>
             </div>
             <!-- Servicio 2 -->
             <div class="col-md-4 mb-4">
-                <div class="card service-card p-5">
-                    <img src="img/icon3.png.webp" class="card-img-top service-img p-2" alt="Servicio de Electricidad">
+                <div class="card service-card">
+                    <img src="img/icon3.png.webp" class="card-img-top service-img" alt="Servicio de Electricidad">
                     <div class="card-body">
-                        <h5 class="card-title text-left">Electricidad</h5>
-                        <p class="card-text">Desde instalaciones eléctricas hasta mantenimiento de sistemas, nuestros servicios eléctricos aseguran un entorno seguro y funcional.</p>
+                        <h5 class="card-title">Electricidad</h5>
+                        <p class="card-text">Desde instalaciones eléctricas hasta mantenimiento de sistemas, nuestros
+                            servicios eléctricos aseguran un entorno seguro y funcional.</p>
                     </div>
                 </div>
             </div>
             <!-- Servicio 3 -->
             <div class="col-md-4 mb-4">
-                <div class="card service-card p-5">
-                    <img src="img/ugent.png" class="card-img-top service-img p-2" alt="Servicio de Urgencias">
+                <div class="card service-card">
+                    <img src="img/ugent.png" class="card-img-top service-img" alt="Servicio de Urgencias">
                     <div class="card-body">
-                        <h5 class="card-title text-left">Servicios de Urgencia</h5>
-                        <p class="card-text">Atención 24/7 para emergencias de fontanería y electricidad, brindando soluciones rápidas y efectivas en cualquier momento.</p>
+                        <h5 class="card-title">Servicios de Urgencia</h5>
+                        <p class="card-text">Atención 24/7 para emergencias de fontanería y electricidad, brindando
+                            soluciones rápidas y efectivas en cualquier momento.</p>
                     </div>
                 </div>
             </div>
         </div>
+
         <div class="row">
             <!-- Servicio 4 -->
             <div class="col-md-4 mb-4">
                 <div class="card service-card">
                     <img src="img/Calefacción.jpg" class="card-img-top service-img" alt="Instalación de Calefacción">
                     <div class="card-body">
-                        <h5 class="card-title text-left">Instalación de Calefacción</h5>
-                        <p class="card-text">Proporcionamos servicios de instalación y mantenimiento de sistemas de calefacción, adaptados a tus necesidades específicas.</p>
+                        <h5 class="card-title">Instalación de Calefacción</h5>
+                        <p class="card-text">Proporcionamos servicios de instalación y mantenimiento de sistemas de
+                            calefacción, adaptados a tus necesidades específicas.</p>
                     </div>
                 </div>
             </div>
             <!-- Servicio 5 -->
             <div class="col-md-4 mb-4">
-                <div class="card service-card p-5">
-                    <img src="img/icon2.png.webp" class="card-img-top service-img p-2" alt="Instalación de Gas">
+                <div class="card service-card">
+                    <img src="img/icon2.png.webp" class="card-img-top service-img" alt="Instalación de Gas">
                     <div class="card-body">
-                        <h5 class="card-title text-left">Instalación de Gas</h5>
-                        <p class="card-text">Servicios profesionales de instalación y revisión de sistemas de gas para asegurar un ambiente seguro y conforme a la normativa.</p>
+                        <h5 class="card-title">Instalación de Gas</h5>
+                        <p class="card-text">Servicios profesionales de instalación y revisión de sistemas de gas para
+                            asegurar un ambiente seguro y conforme a la normativa.</p>
                     </div>
                 </div>
             </div>
@@ -118,13 +196,15 @@
                 <div class="card service-card">
                     <img src="img/Energía_Solar.jpg" class="card-img-top service-img" alt="Energía Solar">
                     <div class="card-body">
-                        <h5 class="card-title text-center">Energía Solar</h5>
-                        <p class="card-text">Instalación de paneles solares y sistemas de energía sostenible para hogares y empresas, promoviendo el uso de energías renovables.</p>
+                        <h5 class="card-title">Energía Solar</h5>
+                        <p class="card-text">Instalación de paneles solares y sistemas de energía sostenible para
+                            hogares y empresas, promoviendo el uso de energías renovables.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
     <div style="height: 60px;"></div>
     <!-- Footer -->
     <footer class="bg-dark text-white text-center py-4">
@@ -135,5 +215,7 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
 </body>
+
 </html>

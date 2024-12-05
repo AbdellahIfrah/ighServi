@@ -7,6 +7,7 @@
     <title>Contacto - IGH Fontanería y Electricidad</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="icon" href="img/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css">
     <style>
         /* Background styles for Three.js canvas */
@@ -41,7 +42,7 @@
     <!-- Barra de navegación -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="index.html">
-            <img src="img/incon.png" alt="Logo" width="60" height="50" class="d-inline-block align-top rounded">
+            <img src="img/logo.png" alt="Logo" height="40" class="d-inline-block align-top rounded">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
             <span class="navbar-toggler-icon"></span>
@@ -148,14 +149,14 @@
         canvasContainer.appendChild(renderer.domElement);
 
         const texture = new THREE.TextureLoader().load(
-            './img/icon.png',
+            // './img/icon.png',
             () => console.log('Texture loaded successfully'),
             undefined,
             (error) => console.error('Error loading texture:', error)
         );
 
-        const geometry = new THREE.SphereGeometry(5, 40, 32);
-        const material = new THREE.MeshBasicMaterial({ map: texture, wireframe: false });
+        const geometry = new THREE.SphereGeometry(5, 64, 64);
+        const material = new THREE.MeshBasicMaterial({ map: texture});
         const sphere = new THREE.Mesh(geometry, material);
         scene.add(sphere);
 
